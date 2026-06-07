@@ -1,0 +1,167 @@
+
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* LEFT */
+
+.about-left {
+  flex: 1.2;
+}
+
+
+
+
+.about-description {
+  color: var(--text-secondary);
+
+  line-height: 1.9;
+
+  margin-bottom: 1.5rem;
+
+  max-width: 700px;
+}
+
+/* STATS */
+
+.about-stats {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: rgba(255,255,255,.03);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  border-radius: 20px;
+
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+
+  color: var(--text-primary);
+
+  margin-bottom: 0.5rem;
+
+}
+
+.stat-card span {
+  color: var(--text-secondary);
+
+  font-size: 0.95rem;
+}
+
+/* RIGHT */
+
+.about-right {
+  flex: 0.8;
+}
+
+.what-i-bring-card {
+  background: rgba(255,255,255,.03);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 28px;
+
+  padding: 2rem;
+}
+
+.what-i-bring-card h3 {
+  font-size: 1.8rem;
+
+  margin-bottom: 1.8rem;
+
+  color: var(--text-primary);
+}
+
+.what-i-bring-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.what-i-bring-card li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: var(--text-secondary);
+
+  line-height: 1.5;
+}
+
+.check-mark {
+  color: #22c55e;
+
+  font-weight: bold;
+
+  font-size: 1.1rem;
+
+  flex-shrink: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 992px) {
+
+  .about-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  
+
+  .about-description {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .section-tag {
+    display: table;
+    margin-inline: auto;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .what-i-bring-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  
+
+  .what-i-bring-card {
+    padding: 1.5rem;
+  }
+}
