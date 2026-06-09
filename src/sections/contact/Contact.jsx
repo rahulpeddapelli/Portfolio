@@ -76,15 +76,48 @@ const Contact = () => {
         try {
             setLoading(true);
 
+            const formattedTime =
+                new Date().toLocaleString(
+                    "en-IN",
+                    {
+                        day: "2-digit",
+                        month: "long",
+                        year: "numeric",
+                        hour: "numeric",
+                        minute: "2-digit",
+                        hour12: true,
+                    }
+                );
+
             await emailjs.send(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                formData,
+                import.meta.env.VITE_EMAILJS_OWNER_TEMPLATE_ID,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    mobile: formData.mobile,
+                    message: formData.message,
+                    time: formattedTime,
+                },
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            );
+
+
+            await emailjs.send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    mobile: formData.mobile,
+                    message: formData.message,
+                    time: formattedTime,
+                },
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
 
             toast.success(
-                "Message sent successfully 🚀"
+                "Message sent successfully"
             );
 
             setFormData({
