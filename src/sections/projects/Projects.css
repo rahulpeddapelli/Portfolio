@@ -1,0 +1,507 @@
+
+
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(350px, 1fr));
+
+  gap: 1.5rem;
+}
+
+/* ===========================
+   PROJECT CARD
+=========================== */
+
+.project-card {
+  background: rgba(255,255,255,.03);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  transition: .35s ease;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255,255,255,.15);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.project-image {
+  position: relative;
+
+  height: 240px;
+
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+
+  /* object-fit: cover; */
+
+  transition: .5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   BADGES
+=========================== */
+
+.project-badge {
+  position: absolute;
+
+  bottom: 15px;
+  left: 15px;
+
+  padding: .5rem .9rem;
+
+  border-radius: 999px;
+
+  font-size: .75rem;
+
+  font-weight: 600;
+
+  backdrop-filter: blur(10px);
+}
+
+.personal-badge {
+  background: rgba(59,130,246,.2);
+
+  border: 1px solid rgba(59,130,246,.4);
+
+  color: #60a5fa;
+}
+
+.client-badge {
+  background: rgba(16,185,129,.2);
+
+  border: 1px solid rgba(16,185,129,.4);
+
+  color: #34d399;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.project-content {
+  padding: 1.4rem;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.project-content h3 {
+  font-size: 1.35rem;
+
+  margin-bottom: .8rem;
+
+  color: white;
+}
+
+.project-content p {
+  color: var(--text-secondary);
+
+  line-height: 1.7;
+
+  margin-bottom: 1rem;
+
+  flex: 1;
+}
+
+/* ===========================
+   TECH STACK
+=========================== */
+
+.project-tech {
+  display: flex;
+
+  gap: .6rem;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 1rem;
+}
+
+.project-tech span {
+  padding: .45rem .8rem;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.05);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  font-size: .78rem;
+
+  color: white;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.project-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: auto;
+}
+
+.project-links {
+  display: flex;
+
+  gap: 1rem;
+}
+
+.project-links a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  color: white;
+
+  background: rgba(255,255,255,.05);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  transition: .3s ease;
+}
+
+.project-links a:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255,255,255,.08);
+}
+
+.know-more-btn {
+  background: transparent;
+
+  border: none;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: .95rem;
+
+  font-weight: 500;
+
+  transition: .3s ease;
+}
+
+.know-more-btn:hover {
+  transform: translateX(4px);
+}
+
+/* ===========================
+   MODAL
+=========================== */
+
+.project-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+   background: rgba(0, 0, 0, .75);
+
+  backdrop-filter: blur(10px);
+
+  z-index: 9999;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+.project-modal {
+  width: 100%;
+
+  max-width: 950px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+     background: #111111;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 24px;
+
+    padding: 2rem;
+
+  position: relative;
+}
+
+/* custom scrollbar */
+
+.project-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-modal::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.15);
+
+  border-radius: 999px;
+}
+
+/* ===========================
+   CLOSE BTN
+=========================== */
+
+.modal-close {
+  /* position: absolute;
+
+  right: 20px;
+  top: 20px; */
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  cursor: pointer;
+
+  background: rgba(255,255,255,.06);
+
+  color: white;
+
+  font-size: 1.2rem;
+}
+
+/* ===========================
+   COVER IMAGE
+=========================== */
+
+.modal-cover {
+  width: 100%;
+
+  height: 350px;
+
+  /* object-fit: contain; */
+  /* border: 1px solid rgba(255,255,255,.08); */
+
+  border-radius: 18px;
+
+  margin-bottom: 1.5rem;
+}
+
+.modal-badge {
+  display: inline-block;
+
+  padding: .5rem .9rem;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.06);
+
+  margin-bottom: 1rem;
+}
+
+.project-modal h2 {
+  margin-bottom: 1rem;
+
+  color: white;
+}
+
+.project-modal p {
+  color: var(--text-secondary);
+
+  line-height: 1.8;
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.feature-list {
+  margin-top: 1rem;
+
+  list-style: none;
+
+  padding: 0;
+}
+
+.feature-list li {
+  position: relative;
+
+  padding-left: 1.4rem;
+
+  margin-bottom: .8rem;
+
+  color: var(--text-secondary);
+}
+
+.feature-list li::before {
+  content: "•";
+
+  position: absolute;
+
+  left: 0;
+
+  color: white;
+}
+
+/* ===========================
+   MODAL TECH
+=========================== */
+
+.tech-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: .6rem;
+
+  margin-top: 1rem;
+}
+
+.tech-list span {
+  padding: .5rem .9rem;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.05);
+
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+
+/* ===========================
+   FULL IMAGE PREVIEW
+=========================== */
+
+.image-preview-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 10000;
+
+  background: rgba(0,0,0,.9);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+.image-preview {
+  max-width: 95vw;
+
+  max-height: 90vh;
+
+  border-radius: 20px;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 992px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-cover {
+    height: 280px;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+
+  .project-image {
+    height: 220px;
+  }
+
+  .project-content {
+    padding: 1.1rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-footer {
+    flex-wrap: wrap;
+
+    gap: 1rem;
+  }
+
+  .project-modal {
+    padding: 1.25rem;
+  }
+
+  .modal-cover {
+    height: 220px;
+  }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width: 480px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .modal-cover {
+    height: 180px;
+  }
+}

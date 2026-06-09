@@ -13,8 +13,15 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+
+
     const [activeSection, setActiveSection] = useState("home");
     const [mobileMenu, setMobileMenu] = useState(false);
+
+
+
+    const RESUME_URL =
+        "https://drive.google.com/uc?export=download&id=1-i-xUgX7-HwHjAr-jC4aASlpMbjHtsqV";
 
     useEffect(() => {
         const sections = document.querySelectorAll("section[id]");
@@ -72,7 +79,7 @@ const Navbar = () => {
                     className="logo"
                     onClick={() => handleNavClick("home")}
                 >
-                 <img src={porfolioLogo}></img>   
+                    <img src={porfolioLogo}></img>
                 </div>
 
                 {/* Desktop Nav */}
@@ -96,8 +103,9 @@ const Navbar = () => {
                 {/* Resume */}
 
                 <a
-                    href="/resume.pdf"
-                    target="_blank"
+                    href={RESUME_URL}
+                    // target="_blank"
+                    rel="noopener noreferrer"
                     className="resume-btn"
                 >
                     Download Resume
@@ -142,8 +150,9 @@ const Navbar = () => {
                     ))}
 
                     <a
-                        href="/resume.pdf"
-                        target="_blank"
+                        href={RESUME_URL}
+                        // target="_blank"
+                        rel="noopener noreferrer"
                         className="mobile-resume-btn"
                     >
                         Download Resume

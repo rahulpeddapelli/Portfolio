@@ -82,15 +82,15 @@ const Hero = () => {
 
           <div className="social-links">
 
-            <a href="#">
+            <a href="https://github.com/rahulpeddapelli" target="_blank">
               <FaGithub />
             </a>
 
-            <a href="#">
+            <a href="https://www.linkedin.com/in/rahul-peddapelli-004929358/" target="_blank">
               <FaLinkedin />
             </a>
 
-            <a href="#">
+            <a href="mailto:rahulpeddapelli2091@gmail.com" target="_blank">
               <FaEnvelope />
             </a>
 

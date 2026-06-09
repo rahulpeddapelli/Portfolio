@@ -60,5 +60,5 @@ export const experiences = [
                 image: lor,
             },
         ],
-    }
+    },
 ];
