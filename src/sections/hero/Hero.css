@@ -1,11 +1,7 @@
 .hero {
-  min-height: 100vh;
   padding-top: 120px;
-
   display: flex;
   align-items: center;
-
-
   position: relative;
 }
 
@@ -16,14 +12,16 @@
   gap: 4rem;
 }
 
-/* LEFT */
 
+
+
+/* LEFT */
 .hero-content {
   flex: 1;
   max-width: 650px;
 }
 
-.hero-tag {
+/* .hero-tag {
   display: inline-block;
 
   color: var(--text-secondary);
@@ -36,10 +34,10 @@
 
   border-radius: 999px;
 
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 
   border: 1px solid var(--border-color);
-}
+} */
 
 .hero-title {
   font-family: var(--font-heading);
@@ -85,6 +83,8 @@
   margin-bottom: 2rem;
 }
 
+
+
 .btn-primary,
 .btn-secondary {
   text-decoration: none;
@@ -108,7 +108,7 @@
 }
 
 .btn-secondary {
-  background: rgba(255,255,255,.05);
+  background: rgba(255, 255, 255, .05);
 
   color: white;
 
@@ -118,7 +118,7 @@
 }
 
 .btn-secondary:hover {
-  background: rgba(255,255,255,.08);
+  background: rgba(255, 255, 255, .08);
 }
 
 /* SOCIALS */
@@ -144,7 +144,7 @@
 
   font-size: 1.2rem;
 
-  background: rgba(255,255,255,.05);
+  background: rgba(255, 255, 255, .05);
 
   border: 1px solid var(--border-color);
 
@@ -159,141 +159,23 @@
 
 
 
-.hero-image-section {
-  flex: 1;
+@media (min-width: 993px) and (max-width: 1008px) {
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
 }
 
-.hero-avatar-wrapper {
-  position: relative;
-
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  min-height: 550px;
-}
-
-.wave-container {
-  animation:
-    handExit 0.8s ease forwards;
-
-  animation-delay: 1.8s;
-}
-
-
-
-.wave-gif {
-  /* width: clamp(250px, 20vw, 380px); */
-   width: min(100%, 600px);
-  height: auto;
-  object-fit: contain;
-}
-
-
-.hero-avatar {
-  width: min(100%, 600px);
-
-  height: auto;
-
-  object-fit: contain;
-
-  animation:
-    avatarEnter .8s ease forwards,
-    /* avatarFloat 6s ease-in-out infinite 1s; */
-
-  /* transform-origin: center; */
-}
-
-
-@keyframes waveHand {
-
-  0% {
-    transform: rotate(0deg);
-  }
-
-  20% {
-    transform: rotate(20deg);
-  }
-
-  40% {
-    transform: rotate(-10deg);
-  }
-
-  60% {
-    transform: rotate(20deg);
-  }
-
-  80% {
-    transform: rotate(-5deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-
-}
-
-
-@keyframes handExit {
-
-  from {
-    opacity: 1;
-    transform:
-      rotateY(0deg)
-      scale(1);
-  }
-
-  to {
-    opacity: 0;
-    transform:
-      rotateY(-180deg)
-      scale(.7);
-  }
-
-}
-
-
-@keyframes avatarEnter {
-
-  from {
-    opacity: 0;
-
-    transform:
-      rotateY(180deg)
-      scale(.7);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      rotateY(0deg)
-      scale(1);
-  }
-
-}
-
-
-/* @keyframes avatarFloat {
-
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-12px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-
-} */
 
 
 
@@ -302,12 +184,6 @@
 /* MOBILE */
 
 @media (max-width: 992px) {
-  .hero-image-section{
-    width: 100%;
-  }
-  .wave-container h3{
-    display: none;
-  }
 
   .hero-container {
     flex-direction: column-reverse;
@@ -330,29 +206,48 @@
   .social-links {
     justify-content: center;
   }
-
-   .hero-avatar-wrapper {
-    min-height: 350px;
-    width: 100%;
-  }
-
-  .hero-avatar {
-    width: 100%;
-  }
-
 }
 
 
 
 @media (max-width: 768px) {
-    .hero-avatar-wrapper {
-   min-height: 250px;
-    width: 100%;
-  }
-  .hero-container{
+  .hero-container {
     gap: 1.4rem;
   }
-  
 }
 
+
+
+
+
+.hero-media {
+  position: relative;
+  width: min(100%, 500px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    opacity .3s ease,
+    transform .8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: rotateY(-180deg) scale(1);
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: rotateY(-90deg) scale(.8);
+}
 

@@ -50,15 +50,15 @@ export const experiences = [
             "React",
         ],
 
-        gallery: [
-            {
-                title: "Internship Certificate",
-                image: certificate,
-            },
-            {
-                title: "Letter of Recommendation",
-                image: lor,
-            },
-        ],
+        // gallery: [
+        //     {
+        //         title: "Internship Certificate",
+        //         image: certificate,
+        //     },
+        //     {
+        //         title: "Letter of Recommendation",
+        //         image: lor,
+        //     },
+        // ],
     },
 ];

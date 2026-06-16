@@ -581,6 +581,7 @@
 .image-preview {
     max-width: 50%;
     max-height: 95%;
+    width: auto;
 
     border-radius: 16px;
 }

@@ -41,7 +41,7 @@ const Hero = () => {
             👋 Hi, I'm Rahul
           </span> */}
 
-          <p className="hero-description" style={{marginBottom:"0.8rem"}}>Hi, I'm </p>
+          <p className="hero-description" style={{ marginBottom: "0.8rem" }}>Hi, I'm </p>
 
           <h1 className="hero-title">
             Rahul
@@ -50,11 +50,11 @@ const Hero = () => {
           </h1>
 
           <h2 className="hero-subtitle">
-            MERN Stack Developer
+            Full Stack Developer
           </h2>
 
           <p className="hero-description">
-            Passionate MERN Stack Developer focused on building
+            Passionate Full Stack Developer focused on building
             modern, responsive, and scalable web applications.
             I enjoy transforming ideas into intuitive digital
             experiences with clean code and thoughtful design.
@@ -63,8 +63,17 @@ const Hero = () => {
           <div className="hero-buttons">
 
             <a
-              href="#contact"
+              href="/"
               className="btn-primary"
+              onClick={(e) => {
+                e.preventDefault();
+
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+              }}
             >
               Contact Me
             </a>
@@ -100,34 +109,18 @@ const Hero = () => {
 
         {/* Right Side */}
 
-        <div className="hero-image-section">
+        <div className="hero-media">
+          <img
+            src={wavingHand}
+            className={`wave-gif ${showAvatar ? "hide" : "show"}`}
+            alt="waving-gif"
+          />
 
-          <div className="hero-avatar-wrapper">
-
-            {!showAvatar ? (
-
-              <div className="wave-container">
-                <img
-                  src={wavingHand}
-                  alt="Waving Hand"
-                  className="wave-gif"
-                />
-
-                <h3 style={{textAlign:"center"}}>Hi There!</h3>
-              </div>
-
-            ) : (
-
-              <img
-                src={rahulAvatar}
-                alt="Rahul Peddapelli"
-                className="hero-avatar"
-              />
-
-            )}
-
-          </div>
-
+          <img
+            src={rahulAvatar}
+            className={`hero-avatar ${showAvatar ? "show" : "hide"}`}
+            alt="Rahul"
+          />
         </div>
 
       </div>

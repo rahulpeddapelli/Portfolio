@@ -23,13 +23,10 @@ const About = () => {
           </span>
 
           <h2 className="section-title">
-            Building digital solutions
-            <br />
-            with passion.
+            Engineering intuitive web experiences
           </h2>
-
           <p className="about-description">
-            I'm a MERN Stack Developer with a strong passion for
+            I'm a Full Stack Developer with a strong passion for
             building modern, responsive, and user-focused web
             applications. Through personal projects, client work,
             and internship experience, I've developed practical

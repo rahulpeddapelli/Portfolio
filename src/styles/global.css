@@ -82,7 +82,7 @@ section {
 }
 
 .section-title{
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 3vw, 3rem);
 
   line-height: 1.1;
 
@@ -122,6 +122,6 @@ section {
 
 @media(max-width:576px) {
    .section-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 }
