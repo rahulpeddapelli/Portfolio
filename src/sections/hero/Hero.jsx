@@ -7,6 +7,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
+const RESUME_URL = import.meta.env.VITE_RESUME_URL;
 
 
 import { SiMongodb, SiJavascript } from "react-icons/si";
@@ -79,8 +80,8 @@ const Hero = () => {
             </a>
 
             <a
-              href="/resume.pdf"
-              target="_blank"
+              href= {RESUME_URL}
+              // target="_blank"
               rel="noreferrer"
               className="btn-secondary"
             >
@@ -91,15 +92,15 @@ const Hero = () => {
 
           <div className="social-links">
 
-            <a href="https://github.com/rahulpeddapelli" target="_blank">
+            <a className="github" href="https://github.com/rahulpeddapelli" target="_blank">
               <FaGithub />
             </a>
 
-            <a href="https://www.linkedin.com/in/rahul-peddapelli-004929358/" target="_blank">
+            <a className="linkedin" href="https://www.linkedin.com/in/rahul-peddapelli-004929358/" target="_blank">
               <FaLinkedin />
             </a>
 
-            <a href="mailto:rahulpeddapelli2091@gmail.com" target="_blank">
+            <a  className="email" href="mailto:rahulpeddapelli2091@gmail.com" target="_blank">
               <FaEnvelope />
             </a>
 

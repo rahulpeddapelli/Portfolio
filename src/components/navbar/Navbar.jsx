@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import "./Navbar.css";
-import porfolioLogo from "../../assets/images/portfolio-logo.png"
+import porfolioLogo from "../../assets/images/portfolio-logo.png";
+
+const RESUME_URL = import.meta.env.VITE_RESUME_URL;
 
 const navLinks = [
     "home",
@@ -18,10 +20,6 @@ const Navbar = () => {
     const [activeSection, setActiveSection] = useState("home");
     const [mobileMenu, setMobileMenu] = useState(false);
 
-
-
-    const RESUME_URL =
-        "https://drive.google.com/uc?export=download&id=1-i-xUgX7-HwHjAr-jC4aASlpMbjHtsqV";
 
     useEffect(() => {
         const sections = document.querySelectorAll("section[id]");
@@ -63,7 +61,7 @@ const Navbar = () => {
 
     const handleNavClick = (id) => {
         setActiveSection(id);
-        setMobileMenu(false);
+        if(mobileMenu) setMobileMenu(false);
 
         document.getElementById(id)?.scrollIntoView({
             behavior: "smooth",
@@ -127,12 +125,20 @@ const Navbar = () => {
                 className={`mobile-menu ${mobileMenu ? "show-mobile-menu" : ""
                     }`}
             >
-                <button
+
+                <div className="mobile-menu-header">
+                    <div className="logo" onClick={() => handleNavClick("home")}>
+                        <img src={porfolioLogo}></img>
+                    </div>
+
+                    <button
                     className="close-btn"
                     onClick={() => setMobileMenu(false)}
                 >
                     <HiX />
                 </button>
+                </div>
+                
 
                 <div className="mobile-links">
                     {navLinks.map((link) => (
