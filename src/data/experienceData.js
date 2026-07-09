@@ -1,6 +1,6 @@
 import xlLogo from "../assets/experience/xl/xl-management-logo.webp";
 import certificate from "../assets/experience/xl/xl-internship-certificate.png";
-import lor from "../assets/experience/xl/xl-lor.png";
+import lor from "../assets/experience/xl/xl-reccomendation-letter.png";
 
 
 export const experiences = [
@@ -17,7 +17,7 @@ export const experiences = [
 
         startDate: "03/26",
 
-        endDate: "Present",
+        endDate: "07/26",
 
         shortDescription:
             "Contributed to the development of client websites and web applications, focusing on responsive design, user experience improvements, SEO implementation, and end-to-end project delivery.",
@@ -50,15 +50,15 @@ export const experiences = [
             "React",
         ],
 
-        // gallery: [
-        //     {
-        //         title: "Internship Certificate",
-        //         image: certificate,
-        //     },
-        //     {
-        //         title: "Letter of Recommendation",
-        //         image: lor,
-        //     },
-        // ],
+        gallery: [
+            {
+                title: "Internship Certificate",
+                image: certificate,
+            },
+            {
+                title: "Letter of Recommendation",
+                image: lor,
+            },
+        ],
     },
 ];

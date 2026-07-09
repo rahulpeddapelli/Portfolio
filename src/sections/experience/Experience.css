@@ -202,29 +202,25 @@
 /* =========================
    KNOW MORE BTN
 ========================= */
-
-.know-more-btn {
+.know-more-btn-wrap {
     margin-top: 1rem;
-
     background: transparent;
-
     border: none;
-
     color: white;
-
     cursor: pointer;
-
     font-size: .95rem;
-
     display: inline-flex;
     align-items: center;
-
-    gap: .4rem;
-
-    transition: .3s;
 }
 
-.know-more-btn:hover {
+.know-more-btn-arrow {
+    display: inline-block;
+    width: 16px;           /* reserve space */
+    margin-left: .4rem;
+    transition: transform .3s ease;
+}
+
+.know-more-btn-wrap:hover .know-more-btn-arrow {
     transform: translateX(4px);
 }
 

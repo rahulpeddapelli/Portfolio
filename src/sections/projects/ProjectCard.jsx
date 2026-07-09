@@ -79,9 +79,9 @@ const ProjectCard = ({
           </div>
 
           <button
-            className="know-more-btn"
+            className="know-more-btn-wrap"
             onClick={() => onOpen(project)}>
-            Know More →
+            Know More <span className="know-more-btn-arrow">→</span>
           </button>
 
         </div>

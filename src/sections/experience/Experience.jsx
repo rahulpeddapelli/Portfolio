@@ -146,12 +146,12 @@ const Experience = () => {
                                     </p>
 
                                     <button
-                                        className="know-more-btn"
+                                        className="know-more-btn-wrap"
                                         onClick={() =>
                                             setSelectedExp(exp)
                                         }
                                     >
-                                        Know More →
+                                        Know More <span className="know-more-btn-arrow">→</span>
                                     </button>
 
                                 </div>
