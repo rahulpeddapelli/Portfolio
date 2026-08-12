@@ -16,6 +16,8 @@ import {
     SiExpress,
     SiPostman,
     SiSocketdotio,
+    SiMysql,
+    SiBootstrap,
 } from "react-icons/si";
 
 import { TbApi } from "react-icons/tb";
@@ -54,6 +56,11 @@ const skillsData = [
                 icon: <SiTailwindcss />,
                 color: "#06B6D4",
             },
+            {
+                name: "Bootstrap",
+                icon: <SiBootstrap />,
+                color: "#7952B3",
+            }
         ],
     },
 
@@ -100,6 +107,11 @@ const skillsData = [
                 name: "Mongoose",
                 icon: <BsDatabase />,
                 color: "#880000"
+            },
+            {
+                name: "MySQL",
+                icon: <SiMysql />,
+                color: "#4479A1",
             }
 
         ],
