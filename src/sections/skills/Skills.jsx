@@ -7,6 +7,7 @@ import {
     FaGithub,
     FaHtml5,
     FaCss3Alt,
+    FaDocker,
 } from "react-icons/fa";
 
 import {
@@ -18,6 +19,8 @@ import {
     SiSocketdotio,
     SiMysql,
     SiBootstrap,
+    SiRedis,
+    SiKubernetes,
 } from "react-icons/si";
 
 import { TbApi } from "react-icons/tb";
@@ -60,7 +63,7 @@ const skillsData = [
                 name: "Bootstrap",
                 icon: <SiBootstrap />,
                 color: "#7952B3",
-            }
+            },
         ],
     },
 
@@ -80,18 +83,18 @@ const skillsData = [
             {
                 name: "REST APIs",
                 icon: <TbApi />,
-                color: "#38BDF8"
+                color: "#38BDF8",
             },
             {
                 name: "Socket.io",
                 icon: <SiSocketdotio />,
-                color: "#FFFFFF"
+                color: "#FFFFFF",
             },
             {
                 name: "JWT",
                 icon: <RiShieldKeyholeLine />,
-                color: "#22C55E"
-            }
+                color: "#22C55E",
+            },
         ],
     },
 
@@ -106,14 +109,18 @@ const skillsData = [
             {
                 name: "Mongoose",
                 icon: <BsDatabase />,
-                color: "#880000"
+                color: "#880000",
             },
             {
                 name: "MySQL",
                 icon: <SiMysql />,
                 color: "#4479A1",
-            }
-
+            },
+            {
+                name: "Redis",
+                icon: <SiRedis />,
+                color: "#DC382D",
+            },
         ],
     },
 
@@ -139,6 +146,16 @@ const skillsData = [
                 name: "Postman",
                 icon: <SiPostman />,
                 color: "#FF6C37",
+            },
+            {
+                name: "Docker",
+                icon: <FaDocker />,
+                color: "#2496ED",
+            },
+            {
+                name: "Kubernetes",
+                icon: <SiKubernetes />,
+                color: "#326CE5",
             },
         ],
     },
@@ -184,7 +201,6 @@ const Skills = () => {
 
                                         <span>{skill.name}</span>
                                     </div>
-
                                 ))}
 
                             </div>

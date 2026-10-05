@@ -10,7 +10,6 @@ import {
 const RESUME_URL = import.meta.env.VITE_RESUME_URL;
 
 
-import { SiMongodb, SiJavascript } from "react-icons/si";
 import { useEffect, useState } from "react";
 
 const Hero = () => {

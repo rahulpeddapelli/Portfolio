@@ -2,12 +2,12 @@ import "./About.css";
 
 const About = () => {
   const highlights = [
+    "Full Stack Development",
     "Problem-Solving Approach",
-    "End-to-End Development Experience",
-    "Client-Focused Mindset",
-    "Real-World Project Experience",
+    "Scalable & Modular Architecture",
+    "REST API & Backend Development",
+    "Performance & User Experience",
     "Continuous Learning & Adaptability",
-    "Performance & User Experience Focus",
   ];
 
   return (
@@ -23,28 +23,30 @@ const About = () => {
           </span>
 
           <h2 className="section-title">
-            Engineering intuitive web experiences
+            Building reliable and engaging web applications
           </h2>
+
           <p className="about-description">
-            I'm a Full Stack Developer with a strong passion for
-            building modern, responsive, and user-focused web
-            applications. Through personal projects, client work,
-            and internship experience, I've developed practical
-            skills in creating scalable solutions that combine
-            functionality, performance, and great user experiences.
+            I'm a Full Stack Developer with experience building modern,
+            responsive, and scalable web applications using the MERN stack.
+            I work across both frontend and backend development, creating
+            intuitive interfaces, REST APIs, authentication workflows,
+            database operations, and real-time application features.
           </p>
 
           <p className="about-description">
-            I enjoy transforming ideas into real-world products,
-            solving technical challenges, and continuously learning
-            new technologies to improve as a developer.
+            I enjoy solving technical problems, designing clean and
+            maintainable solutions, and turning ideas into functional
+            products. I'm continuously expanding my knowledge across
+            backend development, caching, containerization, and cloud-ready
+            application architecture.
           </p>
 
           <div className="about-stats">
 
             <div className="stat-card">
               <h3>2+</h3>
-              <span>Years Learning</span>
+              <span>Years Experience</span>
             </div>
 
             <div className="stat-card">
@@ -52,15 +54,15 @@ const About = () => {
               <span>Projects Built</span>
             </div>
 
-            <div className="stat-card">
+            {/* <div className="stat-card">
               <h3>5+</h3>
-              <span>Client Projects</span>
+              <span>Web Applications</span>
             </div>
 
             <div className="stat-card">
               <h3>100%</h3>
               <span>Commitment</span>
-            </div>
+            </div> */}
 
           </div>
 
